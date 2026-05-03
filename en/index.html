@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoChats</title>
+    <link rel="icon" href="../icon.png" type="image/png" />
+
+    <meta property="og:title" content="InfoChat" />
+    <meta property="og:description" content="Official website of InfoChat" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1401185117086552175/1500453326398165162/icon.png?ex=69f87d8e&is=69f72c0e&hm=3fc65f3de4abd5cefad7d692ef3259497f10717d969beab08c0e3c2d3e78f82c&" />
+    <meta property="og:url" content="https://chat.infobot.uk/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="top-bar">
+
+        <img src="../InfoChat.png" class="top-icon">
+
+        <div class="right-menu">
+            <div class="language-selector">
+                <span class="top-language-text" onclick="toggleLanguageMenu()" id="currentLang">English (US) ▼</span>
+                <div id="language-menu" class="language-menu">
+                    <div class="language-option" onclick="changeLanguage('en')">English (US)</div>
+                    <div class="language-option" onclick="changeLanguage('ko')">한국어</div>
+                    <div class="language-option" onclick="changeLanguage('ja')">日本語</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="top-bar-2"></div>
+
+    </div>
+
+    <div class="main-div">
+        <p class="main-text" id="mainText">Add features to your chat<br>and make it more fun!</p>
+        <p class="main-text-2" id="mainText2">Includes various features like message leveling and automatic message deletion after a set time.</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1337140648805007491" target="_blank" rel="noopener noreferrer" class="main-button-add-a">
+            <button class="main-button-add" id="btnInvite">Invite</button>
+        </a>
+        <button class="main-button-help" onclick="scrollToServer()" id="btnFeatures">See features</button>
+    </div>
+
+    <div class="server-bar">
+        <p class="server-bar-text" id="serverCount">InfoChat is currently used on 100 servers</p>
+    </div>
+
+    <div id="server-section" class="help-bar">
+        <img src="설정 명령어.png" class="help-image-1">
+        <img src="명령어 1.png" class="help-image-2">
+        <div class="help-text-wrap-1">
+            <P class="help-text-1" id="feature1Title">Fine-tune settings with a single command</P>
+            <p class="help-text-2" id="feature1Desc">When you have to set up multiple commands one by one, it can be overwhelming to know where to start. This logging bot lets you configure log channels easily with just a single command. You can create multiple log channels tailored to your server, and it supports 3 languages — Korean, English, and Japanese — so everyone can use it comfortably. There may be times when you don't want logs to appear in certain channels or categories, right? In that case, you can exclude specific channels and categories to log only what you want, neatly and efficiently. It records all kinds of server events, including message deletions and edits, role assignments, bans, and timeouts. Reduce complicated settings, and manage only the logs that are essential for your server easily and conveniently.</p>
+        </div>
+
+        
+        <img src="명령어 2.png" class="help-image-3">
+        <div class="help-text-wrap-2">
+            <p class="help-text-3" id="feature2Title">Detailed log recording</p>
+            <p class="help-text-4" id="feature2Desc">There must have been times when you checked a message deletion log and felt frustrated because you couldn't tell when it was deleted. InfoLogs reduces that inconvenience by recording the message's creation time as well, so you can see at a glance exactly when it was deleted. Message edit logs don't just end with 'edited.' It records a link to the message so you can immediately see what was edited. InfoLogs doesn't stop at message deletions and edits. It logs all essential server events, including bans, kicks, timeouts, invite link creations, and nickname changes, leaving no event unrecorded.</p>
+        </div>
+    </div>
+
+
+    <div class="down-bar">
+        <p class="down-InfoLogs">InfoChat</p>
+
+
+        <div class="down-text-1-div">
+            <p class="down-text-1" id="support-server">Support Server</p>
+            <div class="down-text-2-div">
+                <a href="https://discord.gg/64q43VEVtn" class="down-text-2-a" target="_blank" rel="noopener noreferrer">
+                    <p class="down-text-2" id="discord-server">Discord Server</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="down-text-3-div">
+            <p class="down-text-3" id="footerDev">Developer</p>
+            <div class="down-text-4-div">
+                <p class="down-text-4">gguummaa</p>
+            </div>
+        </div>
+
+        <div class="down-text-3-1-div">
+            <p class="down-text-5" id="footerTeam">Team</p>
+            <div class="down-text-6-div">
+                <p class="down-text-6">utf1972</p>
+                <p class="down-text-6">daeyoung_ceo</p>
+                <p class="down-text-6">sunharu0707</p>
+                <p class="down-text-6">aru._.0321</p>
+            </div>
+        </div>
+
+        <div class="down-text-7-div">
+            <p class="down-text-7" id="footerPolicy">Policies & Terms</p>
+            <div class="down-text-8-div">
+                <a href="privacy-policy/" class="down-text-8-a">
+                    <p class="down-text-8" id="footerPrivacy">Privacy Policy</p>
+                </a>
+                <a href="terms-of-service/" class="down-text-8-a">
+                    <p class="down-text-8" id="footerTerms">Terms of Service</p>
+                </a>
+            </div>
+        </div>
+        <div class="down-text-9-div">
+            <p class="down-text-9">Copyright © 2025 InfoCompany. All rights reserved.</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="../index.js"></script>
+</body>
+</html>
